@@ -1,6 +1,6 @@
 object ZhurnalForm: TZhurnalForm
-  Left = 974
-  Top = 460
+  Left = 846
+  Top = 389
   Width = 1044
   Height = 540
   Caption = 'ZhurnalForm'

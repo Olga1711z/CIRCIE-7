@@ -1,6 +1,6 @@
 object Form6: TForm6
-  Left = 348
-  Top = 252
+  Left = 577
+  Top = 282
   Width = 850
   Height = 408
   Caption = 'Form6'
@@ -107,8 +107,8 @@ object Form6: TForm6
     Variables = <>
     Style = <>
     object Page1: TfrxReportPage
-      PaperWidth = 210.015666666666700000
-      PaperHeight = 297.010666666666700000
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
       PaperSize = 9
       LeftMargin = 10.000000000000000000
       RightMargin = 10.000000000000000000

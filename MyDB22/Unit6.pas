@@ -14,11 +14,11 @@ type
     DataSource1: TDataSource;
     DBGrid1: TDBGrid;
     MySQLDatabase2: TMySQLDatabase;
-    T: TEdit;
+    editdearch: TEdit;
     Button2: TButton;
     frxDBDataset1: TfrxDBDataset;
-    frxReport1: TfrxReport;
     frxPDFExport1: TfrxPDFExport;
+    frxReport1: TfrxReport;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
@@ -39,8 +39,9 @@ begin
  if (MySQLQuery1.Active = false)
  then
   begin
-      MySQLQuery1.ParamByName('par1').AsString :=Text;
+      MySQLQuery1.ParamByName('par1').AsString :=editdearch.Text;
       MySQLQuery1.Active:= true;
+      showmessage('');
   end
  else
   MySQLQuery1.Active:= false;

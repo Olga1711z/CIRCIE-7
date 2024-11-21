@@ -1,6 +1,6 @@
 object Form6: TForm6
-  Left = 777
-  Top = 595
+  Left = 474
+  Top = 249
   Width = 850
   Height = 408
   Caption = 'Form6'
@@ -25,8 +25,9 @@ object Form6: TForm6
   object DBGrid1: TDBGrid
     Left = 112
     Top = 168
-    Width = 409
+    Width = 521
     Height = 113
+    DataSource = DataSource1
     TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -34,13 +35,13 @@ object Form6: TForm6
     TitleFont.Name = 'MS Sans Serif'
     TitleFont.Style = []
   end
-  object T: TEdit
+  object editdearch: TEdit
     Left = 384
     Top = 32
     Width = 81
     Height = 21
     TabOrder = 2
-    Text = 'cotrudniki'
+    Text = 'Bystrova'
   end
   object Button2: TButton
     Left = 640
@@ -53,8 +54,9 @@ object Form6: TForm6
   end
   object MySQLQuery1: TMySQLQuery
     Database = MySQLDatabase2
+    Active = True
     SQL.Strings = (
-      'SELECT * FROM bystrova_cotrudniki WHERE cortrudniki LIKE :par1;')
+      'SELECT * FROM bystrova_cotrudniki WHERE cotrudniki LIKE :par1;')
     Left = 240
     Top = 24
     ParamData = <
@@ -94,8 +96,8 @@ object Form6: TForm6
     PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator]
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Default'
-    ReportOptions.CreateDate = 45616.970142777780000000
-    ReportOptions.LastChange = 45616.970142777780000000
+    ReportOptions.CreateDate = 45618.392723078700000000
+    ReportOptions.LastChange = 45618.392746423610000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -103,22 +105,285 @@ object Form6: TForm6
       'end.')
     Left = 568
     Top = 200
-    Datasets = <>
+    Datasets = <
+      item
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset1'
+      end>
     Variables = <>
-    Style = <>
+    Style = <
+      item
+        Name = 'Title'
+        Color = clNavy
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -16
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+      end
+      item
+        Name = 'Header'
+        Color = clNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clMaroon
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+      end
+      item
+        Name = 'Group header'
+        Color = 15790320
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+      end
+      item
+        Name = 'Data'
+        Color = clNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+      end
+      item
+        Name = 'Group footer'
+        Color = clNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+      end
+      item
+        Name = 'Header line'
+        Color = clNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = []
+        Frame.Typ = [ftBottom]
+        Frame.Width = 2.000000000000000000
+      end>
     object Page1: TfrxReportPage
-      PaperWidth = 210.000000000000000000
-      PaperHeight = 297.000000000000000000
+      PaperWidth = 209.973333333333300000
+      PaperHeight = 296.926000000000000000
       PaperSize = 9
       LeftMargin = 10.000000000000000000
       RightMargin = 10.000000000000000000
       TopMargin = 10.000000000000000000
       BottomMargin = 10.000000000000000000
+      object ReportTitle1: TfrxReportTitle
+        Height = 26.456710000000000000
+        Top = 18.897650000000000000
+        Width = 718.009912533333300000
+        object Memo1: TfrxMemoView
+          Align = baWidth
+          Width = 718.009912533333300000
+          Height = 22.677180000000000000
+          Color = clNavy
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWhite
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          HAlign = haCenter
+          Memo.Strings = (
+            'Report')
+          ParentFont = False
+          Style = 'Title'
+          VAlign = vaCenter
+        end
+      end
+      object PageHeader1: TfrxPageHeader
+        Height = 22.677180000000000000
+        Top = 68.031540000000000000
+        Width = 718.009912533333300000
+        object Memo2: TfrxMemoView
+          Width = 718.009448818897600000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Frame.Typ = [ftBottom]
+          Frame.Width = 2.000000000000000000
+          ParentFont = False
+          Style = 'Header line'
+        end
+        object Memo3: TfrxMemoView
+          Width = 80.000000000000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clMaroon
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.Strings = (
+            'idcotrudniki')
+          ParentFont = False
+          Style = 'Header'
+        end
+        object Memo4: TfrxMemoView
+          Left = 80.000000000000000000
+          Width = 289.502761712308100000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clMaroon
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.Strings = (
+            'cotrudniki')
+          ParentFont = False
+          Style = 'Header'
+        end
+        object Memo5: TfrxMemoView
+          Left = 369.502761712308100000
+          Width = 62.260395326690360000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clMaroon
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.Strings = (
+            'tel')
+          ParentFont = False
+          Style = 'Header'
+        end
+        object Memo6: TfrxMemoView
+          Left = 431.763157038998400000
+          Width = 286.246291779899200000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clMaroon
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = [fsBold]
+          Memo.Strings = (
+            'position')
+          ParentFont = False
+          Style = 'Header'
+        end
+      end
+      object MasterData1: TfrxMasterData
+        Height = 18.897650000000000000
+        Top = 151.181200000000000000
+        Width = 718.009912533333300000
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset1'
+        RowCount = 0
+        object Memo7: TfrxMemoView
+          Width = 80.000000000000000000
+          Height = 18.897650000000000000
+          DataField = 'idcotrudniki'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.Strings = (
+            '[frxDBDataset1."idcotrudniki"]')
+          ParentFont = False
+          Style = 'Data'
+        end
+        object Memo8: TfrxMemoView
+          Left = 80.000000000000000000
+          Width = 289.502761712308100000
+          Height = 18.897650000000000000
+          DataField = 'cotrudniki'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.Strings = (
+            '[frxDBDataset1."cotrudniki"]')
+          ParentFont = False
+          Style = 'Data'
+        end
+        object Memo9: TfrxMemoView
+          Left = 369.502761712308100000
+          Width = 62.260395326690360000
+          Height = 18.897650000000000000
+          DataField = 'tel'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.Strings = (
+            '[frxDBDataset1."tel"]')
+          ParentFont = False
+          Style = 'Data'
+        end
+        object Memo10: TfrxMemoView
+          Left = 431.763157038998400000
+          Width = 286.246291779899200000
+          Height = 18.897650000000000000
+          DataField = 'position'
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Arial'
+          Font.Style = []
+          Memo.Strings = (
+            '[frxDBDataset1."position"]')
+          ParentFont = False
+          Style = 'Data'
+        end
+      end
+      object PageFooter1: TfrxPageFooter
+        Height = 26.456710000000000000
+        Top = 230.551330000000000000
+        Width = 718.009912533333300000
+        object Memo11: TfrxMemoView
+          Align = baWidth
+          Width = 718.009912533333300000
+          Frame.Typ = [ftTop]
+          Frame.Width = 2.000000000000000000
+        end
+        object Memo12: TfrxMemoView
+          Top = 1.000000000000000000
+          Height = 22.677180000000000000
+          AutoWidth = True
+          Memo.Strings = (
+            '[Date] [Time]')
+        end
+        object Memo13: TfrxMemoView
+          Align = baRight
+          Left = 642.419312533333300000
+          Top = 1.000000000000000000
+          Width = 75.590600000000000000
+          Height = 22.677180000000000000
+          HAlign = haRight
+          Memo.Strings = (
+            'Page [Page#]')
+        end
+      end
     end
   end
   object frxDBDataset1: TfrxDBDataset
     UserName = 'frxDBDataset1'
     CloseDataSource = False
+    FieldAliases.Strings = (
+      'idcotrudniki=idcotrudniki'
+      'cotrudniki=cotrudniki'
+      'tel=tel'
+      'position=position')
     DataSource = DataSource1
     Left = 624
     Top = 200

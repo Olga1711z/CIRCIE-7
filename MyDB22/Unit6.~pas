@@ -39,7 +39,7 @@ begin
  if (MySQLQuery1.Active = false)
  then
   begin
-      MySQLQuery1.ParamByName('par1').AsString := klass.Text;
+      MySQLQuery1.ParamByName('par1').AsString :=Text;
       MySQLQuery1.Active:= true;
   end
  else
@@ -48,7 +48,7 @@ end;
 
 procedure TForm6.Button2Click(Sender: TObject);
 begin
-   frxReport11.ShowReport ();
+   frxReport1.ShowReport();
 end;
 
 end.
